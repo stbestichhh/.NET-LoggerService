@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using LoggerExtensions;
 
 namespace Logger
 {
@@ -14,20 +15,13 @@ namespace Logger
             currentDirectory = Directory.GetCurrentDirectory();
             this.logFileName = logFileName + ".txt";
             logFilePath = currentDirectory + "/" + this.logFileName;
-        }
-
-        private string DefineLogDateTime()
-        {
-            return $"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}";
-        }        
+        }          
 
         public override void Log(string message)
         {
             using (StreamWriter writer = File.AppendText(logFilePath))
-            {
-                writer.Write($"\r\n{currentDirectory} | Log into : {logFileName}| {DefineLogDateTime()}");
-                writer.WriteLine($"\t: {message}");
-                writer.WriteLine();
+            {                
+                writer.CreateLogMessage(message, logFileName);
             }
         }
     }
