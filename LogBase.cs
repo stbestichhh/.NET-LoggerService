@@ -2,9 +2,9 @@
 
 namespace Logger
 {
-    public abstract class LogBase
+    public interface LogBase
     {
-        public abstract void Log(string message);
+        public void Log(string message);
     }
 }
 
