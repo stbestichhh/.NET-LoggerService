@@ -7,7 +7,7 @@
 * `LogLevels.Error`
 * `LogLevels.Critical`
 
-## You can in two ways
+## You can use it in two ways
 
 #### First way to use:
 Use log with [levels](#You-can-log-using-diffent-levels:). To log **information, trace or warning**:
