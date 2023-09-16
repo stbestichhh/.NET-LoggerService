@@ -6,11 +6,10 @@ namespace LoggerExtensions
     public static class LoggerClassExtensions
     {       
         public static void CreateLogMessage(this StreamWriter writer, string message, string logFileName)
-        {                    
-            string logInfo = $"\r\nLog into '{logFileName}' | {DefineLogDateTime()}" +
-                             $"\n\t: {message}\n";
+        {
+            string logInfo = $"\r\n[{DefineLogDateTime()}]\n";                             
 
-            writer.Write($"{logInfo} + {CreateLogBorder(logInfo)}\n");
+            writer.Write($"{logInfo}\nLog into '{logFileName}'\n\t: {message}\n{CreateLogBorder(logInfo)}\n");
         }
 
         private static string DefineLogDateTime()
