@@ -24,6 +24,7 @@ dotnet add package StLogger.Test --version 1.0.1
 2. Connect it to your code 
 `using EasyLogPackage;`
 3. Create an instance of the class and paste file name in the constructor
+
 `Logger logger = new Logger("FileName");`
 
 ##### Usage examples
