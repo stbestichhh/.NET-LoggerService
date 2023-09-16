@@ -1,28 +1,22 @@
 ﻿using System;
 using System.IO;
+using Logger;
 
 namespace LoggerExtensions
 {
     public static class LoggerClassExtensions
-    {       
-        public static void CreateLogMessage(this StreamWriter writer, string message, string logFileName)
+    {
+        public static void CreateLogMessage(this StreamWriter writer, string message, LogLevels logLevel, Exception exception = null)
         {
-            string logInfo = $"\r\n[{DefineLogDateTime()}]\n";                             
+            string logInfo = $"{DefineLogDateTime()}|";          
 
-            writer.Write($"{logInfo}\nLog into '{logFileName}'\n\t: {message}\n{CreateLogBorder(logInfo)}\n");
+            writer.Write($"{logInfo}|{logLevel}|{message}|\n\t: {exception}\n");
         }
 
         private static string DefineLogDateTime()
         {                        
-            return $"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}";
-        }
-
-        private static string CreateLogBorder(string logInfo)
-        {
-            int borderLength = logInfo.Length;
-            string logBorder = new string('-', borderLength);
-            return logBorder;
-        }        
+            return $"{DateTime.Now.ToShortDateString()}\n{DateTime.Now.ToLongTimeString()}";
+        }     
     }
 }
 
