@@ -8,7 +8,7 @@ class Program
     {
         string logFileName = "LogFile";
         Logger logger = new Logger(logFileName);        
-        logger.Log("Test Log");       
+        logger.Log("Test Log", LogLevels.Warning);
     }
 }
 

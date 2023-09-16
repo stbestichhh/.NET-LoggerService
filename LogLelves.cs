@@ -2,7 +2,7 @@
 
 namespace Logger
 {
-    public enum LogLelves
+    public enum LogLevels
     {
         Trace,
         Information,
