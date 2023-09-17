@@ -19,51 +19,51 @@ namespace Logger
             fileService = new WriteToFile();
         }
 
-        public void Log(string message, LogLevels logLevel, Exception exception = null)
+        public async Task Log(string message, LogLevels logLevel, Exception exception = null)
         {
             switch (logLevel)
             {
                 case LogLevels.Critical:
-                    LogCrit(message, exception);
+                    await LogCrit(message, exception);
                     break;
                 case LogLevels.Error:
-                    LogError(message, exception);
+                    await LogError(message, exception);
                     break;
                 case LogLevels.Information:
-                    LogInfo(message);
+                    await LogInfo(message);
                     break;
                 case LogLevels.Trace:
-                    LogTrace(message);
+                    await LogTrace(message);
                     break;
                 case LogLevels.Warning:
-                    LogWarn(message);
+                    await LogWarn(message);
                     break;
             }
         }
 
-        public void LogCrit(string message, Exception exception)
+        public async Task LogCrit(string message, Exception exception)
         {
-            fileService.Write(logFilePath, message, LogLevels.Critical, exception);
+            await fileService.Write(logFilePath, message, LogLevels.Critical, exception);
         }
 
-        public void LogError(string message, Exception exception)
+        public async Task LogError(string message, Exception exception)
         {
-            fileService.Write(logFilePath, message, LogLevels.Error, exception);
+            await fileService.Write(logFilePath, message, LogLevels.Error, exception);
         }
 
-        public void LogInfo(string message)
+        public async Task LogInfo(string message)
         {
-            fileService.Write(logFilePath, message, LogLevels.Information);
+            await fileService.Write(logFilePath, message, LogLevels.Information);
         }
 
-        public void LogTrace(string message)
+        public async Task LogTrace(string message)
         {
-            fileService.Write(logFilePath, message, LogLevels.Trace);
+            await fileService.Write(logFilePath, message, LogLevels.Trace);
         }
 
-        public void LogWarn(string message)
+        public async Task LogWarn(string message)
         {
-            fileService.Write(logFilePath, message, LogLevels.Warning);
+            await fileService.Write(logFilePath, message, LogLevels.Warning);
         }
     }
 }

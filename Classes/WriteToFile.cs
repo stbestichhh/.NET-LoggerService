@@ -5,9 +5,9 @@ namespace Logger
 {
     public class WriteToFile
     {        
-        public void Write(string logFilePath, string message, LogLevels logLevel, Exception exception = null)
+        public async Task Write(string logFilePath, string message, LogLevels logLevel, Exception exception = null)
         {
-            using (StreamWriter writer = File.AppendText(logFilePath))
+            await using (StreamWriter writer = File.AppendText(logFilePath))
             {
                 writer.CreateLogMessage(message, logLevel, exception);
             }
