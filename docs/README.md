@@ -9,8 +9,8 @@ It's a [.NET 6](https://dotnet.microsoft.com/en-us/apps/maui) logger for C# code
 
 ## Instalation
 
-1. Download it form [NuGet.org](https://www.nuget.org/packages/StLogger.Test/)
-2. Download [last release](https://github.com/stbestichhh/dotNET-LoggerService/releases/tag/v1.0.2)
+1. Download it form [NuGet.org](https://www.nuget.org/packages/StLogger/)
+2. Download [last release](https://github.com/stbestichhh/dotNET-LoggerService/releases/tag/v1.0.3)
 
 or use this command instead:
 
