@@ -1,10 +1,9 @@
 ﻿using System;
 using System.IO;
-using Logger;
 
-namespace LoggerExtensions
+namespace Logger
 {
-    public static class LoggerClassExtensions
+    public static class LoggerClassExtension
     {
         public static void CreateLogMessage(this StreamWriter writer, string message, LogLevels logLevel, Exception exception = null)
         {
