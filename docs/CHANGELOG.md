@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [[v1.0.6] - 18.09.2023](https://github.com/stbestichhh/FileLogger-NuGet-package/releases/tag/v1.0.6)
+
+### Added:
+- New feature by **[@stbestichhh](https://github.com/stbestichhh)** in [#18](https://github.com/stbestichhh/FileLogger-NuGet-package/pull/18)
+
+### Changed:
+- Now in the Log, user must write namespace while creating 'Logger' instance. It will show the namespace where log were created.
+- Also user can add to log ID. It makes to find necessary log in file.
+
 ## [[v1.0.3] - 17.09.2023](https://github.com/stbestichhh/FileLogger-NuGet-package/releases/tag/v1.0.3)
 
 ### Changed:
