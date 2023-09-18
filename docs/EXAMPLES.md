@@ -39,3 +39,5 @@ You can use general command instead of log levels. However, you still must to in
 ```bash
 	logger.Log("YOUR_MESSAGE", Log level, exception, logId);
 ```
+
+**‼️Remember that log id is not ***NECESSARY*****
