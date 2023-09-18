@@ -1,21 +1,20 @@
-﻿using System;
+using System;
 using System.IO;
 
 namespace Logger
 {
-    public static class LoggerClassExtension
+    static class LoggerClassExtensions
     {
-        public static void CreateLogMessage(this StreamWriter writer, string message, LogLevels logLevel, Exception exception = null)
+        public static void CreateLogMessage(this StreamWriter writer, string nameSpace, string message, LogLevels logLevel, Exception exception = null, int logId = 0)
         {
-            string logInfo = $"{DefineLogDateTime()}|";          
+            string logInfo = $"{DefineLogDateTime()}";
 
-            writer.Write($"{logInfo}|{logLevel}|{message}|\n\t: {exception}\n");
+            writer.Write($"\r\n{logInfo}|{logId}|{nameSpace}|{logLevel}|{message} : {exception}\n");
         }
 
         private static string DefineLogDateTime()
-        {                        
-            return $"{DateTime.Now.ToShortDateString()}\n{DateTime.Now.ToLongTimeString()}";
-        }     
+        {
+            return $"{DateTime.Now.ToShortDateString()}\n{DateTime.Now.ToShortTimeString()}";
+        }
     }
 }
-
