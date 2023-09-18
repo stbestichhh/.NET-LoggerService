@@ -23,9 +23,9 @@ dotnet add package StLogger --version 1.0.6
 1. [Install](#Instalation) NuGet package.
 2. Connect it to your code 
 `using EasyLogPackage;`
-3. Create an instance of the class and paste file name in the constructor
+3. Create an instance of the logger, paste class in property and file name in the constructor
 
-`Logger logger = new Logger("FileName");`
+`Logger<CURRENT_CLASS> logger = new Logger<CURRENT_CLASS>("FileName");`
 
 ##### Usage examples
 > [EXAMPLES](EXAMPLES.md)
