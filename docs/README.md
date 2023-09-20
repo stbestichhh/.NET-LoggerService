@@ -23,7 +23,7 @@ dotnet add package StLogger --version 1.0.7
 1. [Install](#Instalation) NuGet package.
 2. Connect it to your code 
 `using EasyLogPackage;`
-3. Call logger and paste class in '<>', then call necessary function to log from [examples](EXAMPLES.md):
+3. Call logger and paste class in '<>', then call necessary function:
 
 `Log<YOUR_CLASS>.Log("YOUR_MESSAGE", LogLevel, Exception, LogId);`
 
