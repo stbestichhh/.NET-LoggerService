@@ -1,5 +1,5 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Static Badge](https://img.shields.io/badge/Nuget-v1.0.7-blue)
+[![Nuget](https://img.shields.io/badge/Nuget-v1.0.7-blue)](https://www.nuget.org/packages/StLogger/)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # File Logger
