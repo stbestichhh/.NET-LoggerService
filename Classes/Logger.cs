@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Logger
 {
-    public class Logger<T> : ILogBase
+    public static class Logger<T>
     {
         private string currentDirectory;
         private string logFileName;
@@ -12,17 +12,17 @@ namespace Logger
         private readonly string? nameSpace;
         private WriteToFile fileService;
 
-        public Logger(string logFileName)
+        static Logger()
         {
             currentDirectory = Directory.GetCurrentDirectory();
-            this.logFileName = logFileName + ".txt";
-            logFilePath = currentDirectory + "/" + this.logFileName;
+            logFileName = "Logs.txt";
+            logFilePath = currentDirectory + "/" + logFileName;
 
             fileService = new WriteToFile();
             nameSpace = typeof(T).FullName;
         }
 
-        public async Task Log(string message, LogLevels logLevel, Exception exception = null, int logId = 0)
+        public static async Task Log(string message, LogLevels logLevel, Exception exception = null, int logId = 0)
         {
             switch (logLevel)
             {
@@ -44,27 +44,27 @@ namespace Logger
             }
         }
 
-        public async Task LogCrit(string message, Exception exception, int logId = 0)
+        public static async Task LogCrit(string message, Exception exception, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Critical, exception, logId);
         }
 
-        public async Task LogError(string message, Exception exception, int logId = 0)
+        public static async Task LogError(string message, Exception exception, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Error, exception, logId);
         }
 
-        public async Task LogInfo(string message, int logId = 0)
+        public static async Task LogInfo(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Information, null, logId);
         }
 
-        public async Task LogTrace(string message, int logId = 0)
+        public static async Task LogTrace(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Trace, null, logId);
         }
 
-        public async Task LogWarn(string message, int logId = 0)
+        public static async Task LogWarn(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Warning, null, logId);
         }
