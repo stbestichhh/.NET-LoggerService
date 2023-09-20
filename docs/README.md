@@ -28,7 +28,7 @@ dotnet add package StLogger --version 1.0.7
 `using EasyLogPackage;`
 3. Call logger and paste class in '<>', then call necessary function:
 
-`Log<YOUR_CLASS>.Log("YOUR_MESSAGE", LogLevel, Exception, LogId);`
+`Logf<YOUR_CLASS>.Log("YOUR_MESSAGE", LogLevel, Exception, LogId);`
 
 ##### Usage examples
 > [EXAMPLES](EXAMPLES.md)
