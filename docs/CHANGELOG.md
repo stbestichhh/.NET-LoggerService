@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [[v1.0.8] - 21.09.2023](https://github.com/stbestichhh/FileLogger-NuGet-package/releases/tag/v1.0.8)
+
+### Added:
+- New function for clearing log file
+
 ## [[v1.0.7] - 20.09.2023](https://github.com/stbestichhh/FileLogger-NuGet-package/releases/tag/v1.0.7)
 
 ### Changed:
