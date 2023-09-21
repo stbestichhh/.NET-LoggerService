@@ -68,5 +68,10 @@ namespace Logger
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Warning, null, logId);
         }
+
+        public static void ClearLogFile()
+        {
+            File.WriteAllFile(logFilePath, string.Empty);
+        }
     }
 }
