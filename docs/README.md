@@ -1,4 +1,4 @@
-[![Nuget](https://img.shields.io/badge/Nuget-v1.0.7-blue)](https://www.nuget.org/packages/StLogger/)
+[![Nuget](https://img.shields.io/badge/Nuget-v1.0.8-blue)](https://www.nuget.org/packages/StLogger/)
 ![Nuget](https://img.shields.io/nuget/dt/StLogger)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -13,7 +13,7 @@ It's a [.NET 6](https://dotnet.microsoft.com/en-us/apps/maui) logger for C# code
 ## Instalation
 
 1. Download it form [NuGet.org](https://www.nuget.org/packages/StLogger/)
-2. Download [last release](https://github.com/stbestichhh/dotNET-LoggerService/releases/tag/v1.0.7)
+2. Download [last release](https://github.com/stbestichhh/dotNET-LoggerService/releases/tag/v1.0.8)
 
 or use this command instead:
 
