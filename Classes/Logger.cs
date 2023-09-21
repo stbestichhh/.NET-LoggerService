@@ -6,11 +6,11 @@ namespace Logger
 {
     public static class Logger<T>
     {
-        private string currentDirectory;
-        private string logFileName;
-        private string logFilePath;
-        private readonly string? nameSpace;
-        private WriteToFile fileService;
+        private static string currentDirectory;
+        private static string logFileName;
+        private static string logFilePath;
+        private static readonly string? nameSpace;
+        private static WriteToFile fileService;
 
         static Logger()
         {
