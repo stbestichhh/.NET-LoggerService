@@ -19,7 +19,7 @@ It's a [.NET 6](https://dotnet.microsoft.com/en-us/apps/maui) logger for C# code
 or use this command instead:
 
 ```bash
-dotnet add package StLogger --version 1.0.7
+dotnet add package StLogger --version 1.0.8
 ```
     
 ## USAGE
