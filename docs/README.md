@@ -1,4 +1,5 @@
-[![Nuget](https://img.shields.io/badge/Nuget-v1.0.8-blue)](https://www.nuget.org/packages/StLogger/)
+[![Nuget](https://img.shields.io/badge/Nuget-v1.0.8-blue)](https://www.nuget.org/packages/StLogger#readme-body-tab)
+[![Nuget](https://img.shields.io/badge/Nuget-v1.0.6-purple)](https://www.nuget.org/packages/StLogger/1.1.6#readme-body-tab)
 ![Nuget](https://img.shields.io/nuget/dt/StLogger)
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
