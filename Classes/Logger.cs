@@ -5,18 +5,16 @@ using System.Threading.Tasks;
 namespace Logger
 {
     public static class Logger<T>
-    {
-        private static string currentDirectory;
-        private static string logFileName;
-        private static string logFilePath;
+    {            
+        private static readonly string logFilePath;
         private static readonly string? nameSpace;
-        private static WriteToFile fileService;
+        private static readonly WriteToFile fileService;
 
         static Logger()
         {
-            currentDirectory = Directory.GetCurrentDirectory();
-            logFileName = "Logs.txt";
-            logFilePath = currentDirectory + "/" + logFileName;
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string logFileName = "Logs.txt";
+            logFilePath = Path.Combine(currentDirectory, logFileName)
 
             fileService = new WriteToFile();
             nameSpace = typeof(T).FullName;
