@@ -22,7 +22,7 @@ namespace Logger
             nameSpace = typeof(T).FullName;
         }
 
-        public static async Task Log(string message, LogLevels logLevel, Exception exception = null, int logId = 0)
+        public static async Task Log(LogLevels logLevel, string message = null,  Exception exception = null, int logId = 0)
         {
             switch (logLevel)
             {
@@ -44,12 +44,12 @@ namespace Logger
             }
         }
 
-        public static async Task LogCrit(string message, Exception exception, int logId = 0)
+        public static async Task LogCrit(Exception exception, string message = null, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Critical, exception, logId);
         }
 
-        public static async Task LogError(string message, Exception exception, int logId = 0)
+        public static async Task LogError(Exception exception, string message = null, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Error, exception, logId);
         }
