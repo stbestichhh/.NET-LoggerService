@@ -1,4 +1,3 @@
-[![Nuget](https://img.shields.io/badge/Nuget-v1.0.9-blue)](https://www.nuget.org/packages/StLogger/1.0.9#readme-body-tab)
 [![Nuget](https://img.shields.io/badge/Nuget-v1.0.91-purple)](https://www.nuget.org/packages/StLogger/1.0.91#readme-body-tab)
 ![Nuget](https://img.shields.io/nuget/dt/StLogger)
 
