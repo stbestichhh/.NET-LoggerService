@@ -7,11 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [[v1.0.9] - 23.09.2023](https://github.com/stbestichhh/FileLogger-NuGet-package/releases/tag/v1.0.9)
 
-### Added:
-- Now it is two versions:
-  - v1.0.9 not static
-  - v1.0.91 is static
-
 ### Changed:
 - Now log message is not necessary for crits and errors
 - Optimised code speed
