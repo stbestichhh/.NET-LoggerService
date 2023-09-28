@@ -2,33 +2,38 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace Logger
+namespace EasyLogPackage
 {
-    public static class Logger<T>
-    {            
-        private static readonly string logFilePath;
-        private static readonly string? nameSpace;
-        private static readonly WriteToFile fileService;
+    public class Logf<T>
+    {        
+        private readonly string logFilePath;
+        private readonly string? nameSpace;
+        private readonly WriteToFile fileService;        
 
-        static Logger()
+        public Logf(string logFileName = "Logs.txt", string customDirectory = null)
         {
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string logFileName = "Logs.txt";
-            logFilePath = Path.Combine(currentDirectory, logFileName)
-
+            string currentDirectory = string.IsNullOrWhiteSpace(customDirectory) ?
+                Directory.GetCurrentDirectory() : customDirectory;
+            
+            logFilePath = Path.Combine(currentDirectory, logFileName);
             fileService = new WriteToFile();
             nameSpace = typeof(T).FullName;
-        }
+        }        
 
-        public static async Task Log(LogLevels logLevel, string message = null,  Exception exception = null, int logId = 0)
+        public string SetDirectory(string currentDirectory )
+        {
+            return currentDirectory;
+        }
+        
+        public async Task Log(LogLevels logLevel, string message = null, Exception exception = null, int logId = 0)
         {
             switch (logLevel)
             {
                 case LogLevels.Critical:
-                    await LogCrit(message, exception, logId);
+                    await LogCrit(exception, message, logId);
                     break;
                 case LogLevels.Error:
-                    await LogError(message, exception, logId);
+                    await LogError(exception, message, logId);
                     break;
                 case LogLevels.Information:
                     await LogInfo(message, logId);
@@ -42,34 +47,34 @@ namespace Logger
             }
         }
 
-        public static async Task LogCrit(Exception exception, string message = null, int logId = 0)
+        public async Task LogCrit(Exception exception, string message = null, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Critical, exception, logId);
         }
 
-        public static async Task LogError(Exception exception, string message = null, int logId = 0)
+        public async Task LogError(Exception exception, string message = null, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Error, exception, logId);
         }
 
-        public static async Task LogInfo(string message, int logId = 0)
+        public async Task LogInfo(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Information, null, logId);
         }
 
-        public static async Task LogTrace(string message, int logId = 0)
+        public async Task LogTrace(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Trace, null, logId);
         }
 
-        public static async Task LogWarn(string message, int logId = 0)
+        public async Task LogWarn(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Warning, null, logId);
         }
 
-        public static void ClearLogFile()
+        public void Cleanf()
         {
-            File.WriteAllFile(logFilePath, string.Empty);
+            File.WriteAllText(logFilePath, string.Empty);
         }
     }
 }
