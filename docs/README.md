@@ -13,12 +13,12 @@ It's a [.NET 6](https://dotnet.microsoft.com/en-us/apps/maui) logger for C# code
 ## Instalation
 
 1. Download it form [NuGet.org](https://www.nuget.org/packages/StLogger/)
-2. Download [last release](https://github.com/stbestichhh/dotNET-LoggerService/releases/tag/v1.0.9)
+2. Download [last release](https://github.com/stbestichhh/dotNET-LoggerService/releases/tag/v1.1.0)
 
 or use this command instead:
 
 ```bash
-dotnet add package StLogger --version 1.0.9
+dotnet add package StLogger --version 1.1.0
 ```
     
 ## USAGE
@@ -26,9 +26,15 @@ dotnet add package StLogger --version 1.0.9
 1. [Install](#Instalation) NuGet package.
 2. Connect it to your code 
 `using EasyLogPackage;`
-3. Call class and paste class in '<>', then call necessary function:
+3. Create class instance and paste class name in '<>':
 
-`Logf<YOUR_CLASS>.LogInfo("YOUR_MESSAGE")`
+`Logf<YOUR_CLASS> logger = new Logf<YOUR_CLASS>("FILE_NAME", "DIRECTORY")`
+
+‼️***Remeber***, **it is not necessary to write 'FILE_NAME' and 'DIRECTORY' in constructor**‼️
+
+4. Then call necessary function:
+
+`logger.LogInfo("YOUR_MESSAGE")`
 
 ##### Usage examples
 > [EXAMPLES](EXAMPLES.md)
