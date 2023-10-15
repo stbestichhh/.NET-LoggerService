@@ -40,7 +40,7 @@ dotnet add package StLogger --version 1.1.0
 > [EXAMPLES](EXAMPLES.md)
 
 ## Links
-* **NuGet [Website](https://www.nuget.org) | [My Package](https://www.nuget.org/packages/StLogger.Test/)**
+* **NuGet [Website](https://www.nuget.org) | [My Package](https://www.nuget.org/packages/StLogger/)**
 * **.NET [Website](https://dotnet.microsoft.com/en-us/) | [Instalation](https://dotnet.microsoft.com/en-us/download)**
 
 ## Authors
