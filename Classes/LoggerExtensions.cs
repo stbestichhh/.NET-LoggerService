@@ -10,7 +10,7 @@ namespace Logger
         {
             string logInfo = $"{DefineLogDateTime()}";
 
-            await writer.Write($"\r\n{logInfo}|{logId}|{nameSpace}|{logLevel}|{message} : {exception}\n");
+            await writer.Write($"\r\n{logInfo}|{logId}|{nameSpace}|{logLevel}|{message} : {exception.Message}\n");
         }
 
         private static string DefineLogDateTime()
