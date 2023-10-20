@@ -30,7 +30,8 @@ dotnet add package StLogger --version 1.2.0
 
 `Logf<YOUR_CLASS> logger = new Logf<YOUR_CLASS>("FILE_NAME", "DIRECTORY")`
 
-‼️***Remeber***, **it is not necessary to write 'FILE_NAME' and 'DIRECTORY' in constructor**‼️
+>[!NOTE]
+>***Remeber***, **it is not necessary to write 'FILE_NAME' and 'DIRECTORY' in constructor**‼️
 
 4. Then call necessary function:
 
