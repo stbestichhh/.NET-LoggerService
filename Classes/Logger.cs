@@ -67,6 +67,11 @@ namespace EasyLogPackage
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Trace, null, logId);
         }
 
+        public async Task Debug(string message, int logId = 0)
+        {
+            await fileService.Write(logFilePath, nameSpace, message, LogLevels.Debug, null, logId);
+        }
+
         public async Task LogWarn(string message, int logId = 0)
         {
             await fileService.Write(logFilePath, nameSpace, message, LogLevels.Warning, null, logId);
