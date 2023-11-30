@@ -41,6 +41,9 @@ namespace EasyLogPackage
                 case LogLevels.Trace:
                     await LogTrace(message, logId);
                     break;
+                case LogLevels.Debug:
+                    await Debug(message, logId);
+                    break;
                 case LogLevels.Warning:
                     await LogWarn(message, logId);
                     break;
